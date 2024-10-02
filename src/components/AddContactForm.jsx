@@ -83,12 +83,14 @@ function AddContactForm() {
         // Check if we are updating or adding a new contact...
         if (formData.id !== "") {
             updateContact()
+            // Navigate back to contact
+            navigate(`/view/${id}`)
         } else {
             createContact()
+            // Navigate back to root
+            navigate("/")
         }
 
-        // Navigate back to root
-        navigate("/")
       };
     
 
